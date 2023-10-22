@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    let createToDoTip = CreateToDoTip()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image(systemName: "swift")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+                .padding()
+            Text("Hello, TipKit!")
         }
         .padding()
+        .popoverTip(createToDoTip, arrowEdge: .top)
     }
 }
 

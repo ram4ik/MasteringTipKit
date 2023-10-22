@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 @main
 struct MasteringTipKitApp: App {
@@ -13,5 +14,10 @@ struct MasteringTipKitApp: App {
         WindowGroup {
             ContentView()
         }
+    }
+    
+    init() {
+        try? Tips.resetDatastore()
+        try? Tips.configure()
     }
 }
